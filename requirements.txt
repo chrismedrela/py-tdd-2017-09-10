@@ -1,0 +1,8 @@
+# Zależności do wszystkich ćwiczeń
+Flask
+webtest
+mock
+nose2
+behave
+ipython
+typing
