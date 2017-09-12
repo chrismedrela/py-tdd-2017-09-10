@@ -24,6 +24,11 @@ def get_table_name(date):
     except StopIteration:
         return None
 
+    # for table_name in tables:
+    #     if is_right_table(table_name, date):
+    #         return table_name
+    # return None
+
 
 def is_right_table(table_name, date):
     right_prefix = table_name.startswith(TABLE_NAME_PREFIX)
