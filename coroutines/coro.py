@@ -1,14 +1,21 @@
-async def receive(packet_type, packet_data):
+async def receive(
+        packet_type, packet_data):
     if packet_type == 'PING':
-        await send_to_client("PONG", packet_data)
+        await send_to_client(
+            "PONG", packet_data)
     elif packet_type == 'MESSAGE':
-        response = await trigger_event('message', packet_data)
-        await send_to_client('MESSAGE', response)
+        response = await trigger_event(
+            'message', packet_data)
+        await send_to_client(
+            'MESSAGE', response)
     else:
-        raise ValueError('Invalid packet type')
+        raise ValueError(
+            'Invalid packet type')
 
-async def send_to_client(packet_type, packet_data):
+async def send_to_client(
+        packet_type, packet_data):
     raise NotImplementedError
 
-async def trigger_event(event_name, event_data):
+async def trigger_event(
+        event_name, event_data):
     raise NotImplementedError
